@@ -1,12 +1,18 @@
-﻿using System;
+﻿using MemberRegistration.Businnes.Abstract;
+using MemberRegistration.Businnes.DependencyResolvers.Ninject;
+using MemberRegistration.Entities.Concrete;
+using System;
 
 namespace MemberRegistration.ConsoleUI
 {
-    internal class Program
+    class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var memberService=InstanceFactory.GetInstance<IMemberService>();
+            memberService.AddMember(new Member { FirstName="Eda",LastName="Bezek",Email="eda_bezek@hotmail.com",DateOfBirth=new DateTime(1993,4,27),TcNo="24775274626" });
+            Console.WriteLine("Eklendi");
+            Console.ReadLine();
         }
     }
 }

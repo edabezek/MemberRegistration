@@ -1,0 +1,4 @@
+Kimlik paylaþým servisini(kps) implemente edeceðiz.
+
+Businnes>Add>ServiceReferance>buraya linki yapýþtýrýyoruz>Go
+
