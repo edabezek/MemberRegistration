@@ -1,4 +1,13 @@
-Kimlik paylaþým servisini(kps) implemente edeceðiz.
+Gelen hata ile ilgili
 
-Businnes>Add>ServiceReferance>buraya linki yapýþtýrýyoruz>Go
+Muhtemelen endpoint ayarlarý dll e ait config dosyasýndadýr. 
+Bu ayarlarý exe'ye ait config dosyasýna da eklerseniz düzelecektir.
 
+<bindings>
+  <basicHttpBinding>
+    <binding name="BasicHttpBinding_ITestService" />
+  </basicHttpBinding>
+</bindings>
+<client>
+  <endpoint address="http://localhost/TestService.svc" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_ITestService" contract="ServiceReference1.ITestService" name="BasicHttpBinding_ITestService" />
+</client>
